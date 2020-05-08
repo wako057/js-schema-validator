@@ -1,0 +1,54 @@
+{
+  "name": "js-schema-validator",
+  "version": "1.0.0",
+  "private": true,
+  "license": "UNLICENSED",
+  "description": "Small Json Schema Validator",
+  "main": "src/validator.js",
+  "scripts": {
+    "tests": "NODE_ENV=test jest --runInBand",
+    "tests:coverage": "NODE_ENV=test jest --runInBand --coverage",
+    "tests:syntax": "eslint .",
+    "tests:all": "npm run tests:syntax && npm run tests:run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wako057/js-schema-validator.git"
+  },
+  "bugs": {
+    "url": "https://github.com/wako057/js-schema-validator/issues"
+  },
+  "homepage": "https://github.com/wako057/js-schema-validator#readme",
+  "engines": {
+    "node": ">=4.2"
+  },
+  "dependencies": {
+    "is-my-json-valid": "2.20.0",
+    "lodash": "^4.13.1",
+    "qs": "^6.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^6.7.1",
+    "jest": "^26.0.1",
+    "js-logger": "git+https://github.com/wako057/js-logger.git#v1.0.0"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "verbose": true,
+    "globalTeardown": "./tests/teardown.js",
+    "globalSetup": "./tests/setup.js",
+    "unmockedModulePathPatterns": [
+      "./node_modules/"
+    ],
+    "roots": [
+      "<rootDir>/src/",
+      "<rootDir>/tests/"
+    ],
+    "modulePathIgnorePatterns": [
+      "<rootDir>/tests/schemas"
+    ],
+    "globals": {
+      "versionRoute": "/v1"
+    }
+  }
+}

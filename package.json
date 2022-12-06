@@ -25,7 +25,7 @@
   "dependencies": {
     "is-my-json-valid": "2.20.0",
     "lodash": "^4.13.1",
-    "qs": "^6.2.0"
+    "qs": "^6.9.7"
   },
   "devDependencies": {
     "eslint": "^6.7.1",
